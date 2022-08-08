@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tmodloader</Name>
+  <Repository>weilii/tmodloader</Repository>
+  <Registry>https://hub.docker.com/r/weilii/tmodloader/</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.1.77</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/weilii/tmodloader/</Support>
+  <Project>https://tmodloader.net//</Project>
+  <Overview>Terraria 1.4 tModLoader Docker conatainer for UnRaid.&#xD;
+Add Mod Packs to .../contents/ModPacks/&#xD;
+Fill in file paths in the config file in .../contents/&#xD;
+Set up the rest of the condig file and run the docker.</Overview>
+  <Category>GameServers: Status:Beta</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/LFAdams/tmodloader1.4-docker/master/terraria.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1659946176</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Terraria 1.4 tModLoader Docker conatainer for UnRaid.&#xD;
+Add Mod Packs to .../contents/ModPacks/&#xD;
+Fill in file paths in the config file in .../contents/&#xD;
+Set up the rest of the condig file and run the docker.</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7777</HostPort>
+        <ContainerPort>7777</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/terraria-tmodloader</HostDir>
+      <ContainerDir>/server</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Server Data" Target="/server" Default="/mnt/cache/appdata/terraria-tmodloader" Mode="rw" Description="Container Path: /server" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/terraria-tmodloader</Config>
+  <Config Name="Server TCP Port" Target="7777" Default="7777" Mode="tcp" Description="Container Port: 7777" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
+</Container>
